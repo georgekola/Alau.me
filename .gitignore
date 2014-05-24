@@ -1,0 +1,7 @@
+.gitignore
+.DS_Store
+
+Example/Alau.me-Demo.xcodeproj/project.xcworkspace/xcshareddata/*
+Example/Alau.me-Demo.xcodeproj/project.xcworkspace/xcuserdata/*
+Example/Alau.me-Demo.xcodeproj/xcuserdata/*
+
