@@ -64,9 +64,9 @@ it, simply add the following line to your Podfile:
 
 Alternatively, if you don't use CocoaPods, do the following:
 
-1. Download Alau.me SDK from https://alau.me/home/developers
-2. Copy Alaume SDK into a folder in your project
-3. Drag Alaume.framework from Finder to the Frameworks group in your Xcode project
+1. [Download](https://github.com/LumenSpark/Alau.me/archive/master.zip) this repository as ZIP
+2. Copy Alau.me.framework into a folder in your project
+3. Drag Alau.me.framework from Finder to the Frameworks group in your Xcode project
 4. Add Security.framework to your project
 
 ## Frequently Asked Questions
