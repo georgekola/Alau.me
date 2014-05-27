@@ -39,6 +39,7 @@ Each user automatically gets a unique referral link. You can use those to track 
 ## How To Test It
 
 + Copy a referral link to your test device and open it (you should get redirected to the App Store)
+
 + Install and run your app
 
 Assuming your app has never been installed on your test device before, the Total Referral Count will increase by 1 (see the [Campaigns](https://alau.me/manage/campaigns) page). If you are using a custom referral link, you will also see the number of times the link was opened, and the corresponding number of downloads.
@@ -46,7 +47,9 @@ Assuming your app has never been installed on your test device before, the Total
 If you have run your app on your test device before, Alau.me will not count that install as a referral. In this case, you will need to unregister that test device so that Alau.me treats it as a new device. Here's how:
 
 + Run your app and print out the value of the `[AMConnect sharedInstance].referralLink` property
+
 + Use that link to register your device as a Test Device on the [Campaigns](https://alau.me/manage/campaigns) page
+
 + Click the Unregister button everytime you want to test a referral on that device
 
 **Troubleshooting:** If you don't see any referrals, then either your `AMConnect` instance is not initialized properly with the correct App ID and API Key, or your app was previously run on your test device. Feel free to email us at developer@lumenspark.com if you have any questions.
@@ -57,17 +60,19 @@ iOS 7.0 and above.
 
 ## Installation
 
-Alau.me is available through [CocoaPods](http://cocoapods.org). To install
-it, simply add the following line to your Podfile:
+Alau.me is available through [CocoaPods](http://cocoapods.org). To install it, simply add the following line to your Podfile:
 
     pod "Alau.me"
 
 Alternatively, if you don't use CocoaPods, do the following:
 
-1. [Download](https://github.com/LumenSpark/Alau.me/archive/master.zip) this repository as ZIP
-2. Copy Alau.me.framework into a folder in your project
-3. Drag Alau.me.framework from Finder to the Frameworks group in your Xcode project
-4. Add Security.framework to your project
++ [Download](https://github.com/LumenSpark/Alau.me/archive/master.zip) this repository as ZIP
+
++ Copy Alau.me.framework into a folder in your project
+
++ Drag Alau.me.framework from Finder to the Frameworks group in your Xcode project
+
++ Add Security.framework to your project
 
 ## Frequently Asked Questions
 
@@ -120,7 +125,9 @@ BOOL isRegistered = alaume.isRegistered;
 ### Refresh referral properties
 
 The following properties are cached locally and are refreshed automatically from the server at most 
-once per day: `referralCount`, `rewardPoints`, `pointsPerReferral`, `cashPerReferral`, `pointsRequiredToRedeem` and `endDate`. You can refresh those properties on demand, for example, every time you display your Referral Program UI by calling `[AMConnect beginRewardStatusCheckWithDelegate:didFinishSelector:]` method.
+once per day: `referralCount`, `rewardPoints`, `pointsPerReferral`, `cashPerReferral`, `pointsRequiredToRedeem` and `endDate`. 
+
+You can refresh those properties on demand, for example, every time you display your referral program UI by calling `[AMConnect beginRewardStatusCheckWithDelegate:didFinishSelector:]` method.
 
 ```objective-c
 - (void)refreshReferralProperties
